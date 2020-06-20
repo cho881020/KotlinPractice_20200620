@@ -20,12 +20,30 @@ class MainActivity : AppCompatActivity() {
             val inputMessage = messageEdt.text.toString()
 
 //            기록된 내용을 그대로 토스트에 출력
-            Toast.makeText(this, inputMessage, Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this, inputMessage, Toast.LENGTH_SHORT).show()
 
 //            출력용 텍스트뷰에 내용을 그대로 반영
 //            resultTxt 의 text값을 set
 
+//            inputMessage = "메세"
+
             resultTxt.text = inputMessage
+
+
+            if (inputMessage == "Hello") {
+//                검사 결과가 true일때만 실행되는 영역
+                Toast.makeText(this, "인사입니다.", Toast.LENGTH_SHORT).show()
+            }
+            else if (inputMessage == "Hi") {
+                Toast.makeText(this, "다른 인사입니다.", Toast.LENGTH_SHORT).show()
+            }
+            else if (inputMessage == "Bye") {
+                Toast.makeText(this, "작별 인사입니다.", Toast.LENGTH_SHORT).show()
+            }
+            else {
+//                위의 어느 경우에도 해당 안되면 실행할 내용.
+                Toast.makeText(this, "그 외의 메세지입니다.", Toast.LENGTH_SHORT).show()
+            }
 
         }
 
