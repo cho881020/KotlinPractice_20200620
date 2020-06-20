@@ -16,10 +16,17 @@ class MainActivity : AppCompatActivity() {
         okBtn.setOnClickListener {
 
 //            입력한 내용을 => String으로 변환 해서 => inputMessage 공간에 기록.
+//            messageEdt의 text 값을 get
             val inputMessage = messageEdt.text.toString()
 
 //            기록된 내용을 그대로 토스트에 출력
             Toast.makeText(this, inputMessage, Toast.LENGTH_SHORT).show()
+
+//            출력용 텍스트뷰에 내용을 그대로 반영
+//            resultTxt 의 text값을 set
+
+            resultTxt.text = inputMessage
+
         }
 
 
